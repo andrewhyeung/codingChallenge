@@ -1,4 +1,4 @@
-myApp.controller('mainController', function($scope, mainFactory){
+myApp.controller('mainController', function($scope, $http){
 	// $scope.loadMore = function() {
 	// 	console.log('hi'); 
 
@@ -18,5 +18,13 @@ myApp.controller('mainController', function($scope, mainFactory){
 	// wallFactory.get(function(response){
 	// 	$scope.posts = response;
 	// })
-
+	// mainFactory.get(function(response){
+	// 	console.log(response);
+	// })
+	function fetch(){
+		$http.get('https://sneakpeeq-sites.s3.amazonaws.com/interviews/ce/feeds/store.js')
+	}
+	$scope.$watch('search', function(){
+		fetch()
+	})
 })

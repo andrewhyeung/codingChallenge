@@ -5,10 +5,11 @@ myApp.factory('mainFactory', function($http){
 	// 		callback(output);
 	// 	})
 	// }
-	// factory.get = function(callback){
-	// 	$http.get('/getPosts').success(function(output){
-	// 		callback(output);
-	// 	})
-	// }
+	factory.get = function(callback){
+		$http.get('/https://sneakpeeq-sites.s3.amazonaws.com/interviews/ce/feeds/store.js').success(function(output){
+			// callback(output);
+			console.log(output);
+		})
+	}
 	return factory; 
 })
