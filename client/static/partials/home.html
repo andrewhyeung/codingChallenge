@@ -1,8 +1,11 @@
-<div> 
-	<div ng-repeat = 'product in products'>
+<div id = "body"> 
+	<div id="minicart">
+		<h4>Cart</h4>
+	</div>
+	<div id = "product" ng-repeat = "product in products">
 		<img src="{{product.mainImage.ref}}">
-		{{product.name}}, 
-		$.{{product.defaultPriceInCents}}
+		<h4>{{product.name}} </h4>
+		<h4>${{product.defaultPriceInCents | centsToDollar }}</h4>
 		<hr>
 	</div>
 </div>

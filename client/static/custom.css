@@ -2,3 +2,13 @@ body{
 	font-family: Arial; 
 	font-size: 14px;
 }
+
+header{
+	text-align: center;
+	vertical-align: middle;
+}
+
+#product{
+	text-align: center
+}
+
