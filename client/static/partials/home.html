@@ -1,11 +1,16 @@
 <div id = "body"> 
 	<div id="minicart">
 		<h4>Cart</h4>
+		{{ shoppingCart }}
 	</div>
 	<div id = "product" ng-repeat = "product in products">
-		<img src="{{product.mainImage.ref}}">
+		<img id="productImage" src="{{product.mainImage.ref}}">
 		<h4>{{product.name}} </h4>
+		<label><input type="checkbox" value="retail">Retail Price</label>
+		<label><input type="checkbox" value="wholesale">Wholesale Price</label>
 		<h4>${{product.defaultPriceInCents | centsToDollar }}</h4>
+		<h4>${{product.defaultPriceInCents*0.80 | centsToDollar }}</h4>
+		<button>Add to cart</button>
 		<hr>
 	</div>
 </div>

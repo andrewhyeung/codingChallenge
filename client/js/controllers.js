@@ -18,6 +18,9 @@ myApp.controller('mainController', function($scope, mainFactory){
 	// wallFactory.get(function(response){
 	// 	$scope.posts = response;
 	// })
+	$scope.shoppingCart = function(){
+		
+	}
 	mainFactory.get(function(response){
 		console.log(response);
 		$scope.products = response;
