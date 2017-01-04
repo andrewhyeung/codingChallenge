@@ -1,17 +1,25 @@
 body{
 	font-family: Arial; 
 	font-size: 14px;
+	margin: 0px auto;
 }
-
-header h1{
-	text-align: center;
+header {
+	background-color: lightblue;
+	padding: 1%;
 }
+	header h1{
+		text-align: center;
+	}
 	header h2 {
 		text-align: center;
 	}
-
+	header h4 {
+		text-align: center;
+	}
 #product{
-	text-align: center
+	text-align: center; 
+	display: inline-block;
+	width: 33.33%;
 }
 
 #minicart {
@@ -20,4 +28,27 @@ header h1{
 
 #productImage {
 	width: 250px;
+}
+
+button {
+	background-color: white;
+	border-radius: 3px;
+	border: 3px solid #1a1a00;
+	padding: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+   	#product{
+		text-align: center; 
+		display: inline-block;
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+   	#product{
+		text-align: center; 
+		display: block;
+		width: 100%;
+	}
 }
