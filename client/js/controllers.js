@@ -1,5 +1,6 @@
 myApp.controller('mainController', function($scope, mainFactory){
-	$scope.header = {}; 
+	$scope.header = []; 
+	$scope.cart = [];
 	// $scope.loadMore = function() {
 	// 	console.log('hi'); 
 
@@ -22,10 +23,11 @@ myApp.controller('mainController', function($scope, mainFactory){
 
 	$scope.addCart = function(product){
 		console.log(product);
+		$scope.cart.push(1);
+
 	}
 	mainFactory.get(function(response){
-		console.log(response);
-		console.log(response.extraInfo)
+		// console.log(response);
 		$scope.header = response;
 		$scope.products = response.products;
 	})
