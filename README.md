@@ -22,5 +22,7 @@ Application built in angular
 
 Instructions: 
 1. Git clone https://github.com/andrewhyeung/codingChallenge.git
+<br>
 2. npm start or node server.js
+<br>
 3. open in browser @ localhost:8000
