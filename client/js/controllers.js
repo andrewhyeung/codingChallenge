@@ -20,14 +20,25 @@ myApp.controller('mainController', function($scope, mainFactory){
 	// wallFactory.get(function(response){
 	// 	$scope.posts = response;
 	// })
+	$scope.retailPricing = function(product){
+		console.log(product.defaultPriceInCents);
 
-	$scope.addCart = function(product){
-		console.log(product);
-		$scope.cart.push(1);
-
+		product.defaultPriceInCents = product.defaultPriceInCents;
 	}
+	$scope.wholesalePricing = function(product){
+		console.log(product.defaultPriceInCents); 
+		product.defaultPriceInCents = product.defaultPriceInCents* 0.80;
+	}
+	$scope.addCart = function(product){
+		$scope.cart.push(product);
+		console.log($scope.cart);
+	}
+	$scope.removeCart = function(product){
+		$scope.cart.splice(product,1);
+		console.log($scope.cart);
+	}
+
 	mainFactory.get(function(response){
-		// console.log(response);
 		$scope.header = response;
 		$scope.products = response.products;
 	})

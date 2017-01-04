@@ -24,10 +24,15 @@ header {
 
 #minicart {
 	text-align: right; 
+	margin-right: 1%;
 }
 
 #productImage {
 	width: 250px;
+}
+
+.cart{
+	font-size: 20px;
 }
 
 button {
@@ -37,7 +42,7 @@ button {
 	padding: 5px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
    	#product{
 		text-align: center; 
 		display: inline-block;

@@ -6,18 +6,14 @@
 	</header>
 	
 	<div id="minicart">
-		<h4>Cart({{ cart.length }}) <a href="">Purchase</a></h4>
-
-		
+		<h4>Cart({{ cart.length }}) <a href="">Purchase</a></h4>		
 	</div>
 	<div id = "product" ng-repeat = "product in products">
 		<img id="productImage" src="{{product.mainImage.ref}}">
 		<h4>{{product.name}} </h4>
-		<label><input type="checkbox" value="retail">Retail Price</label>
-		<label><input type="checkbox" value="wholesale">Wholesale Price</label>
 		<h4>${{product.defaultPriceInCents | centsToDollar }}</h4>
-		<h4 ng-hide = "wholesale == true">${{product.defaultPriceInCents*0.80 | centsToDollar }}</h4>
-		<button ng-click="addCart(product)">Add to cart</button>
+		<button class="cart"ng-click="removeCart(product)">-</button>
+		<button class="cart" ng-click="addCart(product)">+</button>
 		<hr>
 	</div>
 </div>
