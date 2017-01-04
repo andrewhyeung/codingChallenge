@@ -7,8 +7,7 @@ myApp.factory('mainFactory', function($http){
 	// }
 	factory.get = function(callback){
 		$http.get('https://sneakpeeq-sites.s3.amazonaws.com/interviews/ce/feeds/store.js').success(function(output){
-			callback(output.products);
-			// console.log(output);
+			callback(output);
 		})
 		.error(function(data){
 			alert(data); 

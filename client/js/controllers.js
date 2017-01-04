@@ -1,4 +1,5 @@
 myApp.controller('mainController', function($scope, mainFactory){
+	$scope.header = {}; 
 	// $scope.loadMore = function() {
 	// 	console.log('hi'); 
 
@@ -18,12 +19,15 @@ myApp.controller('mainController', function($scope, mainFactory){
 	// wallFactory.get(function(response){
 	// 	$scope.posts = response;
 	// })
-	$scope.shoppingCart = function(){
-		
+
+	$scope.addCart = function(product){
+		console.log(product);
 	}
 	mainFactory.get(function(response){
 		console.log(response);
-		$scope.products = response;
+		console.log(response.extraInfo)
+		$scope.header = response;
+		$scope.products = response.products;
 	})
 
 })
