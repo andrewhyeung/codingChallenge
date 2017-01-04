@@ -18,9 +18,10 @@ How would you test this application?
 <hr> 
 
 Application built in angular
- - Using MEAN skeleton from repo. 
+ - Using MEAN skeleton from other repo @ https://github.com/andrewhyeung/meanSkeleton 
 
 Instructions: 
+<br> 
 1. Git clone https://github.com/andrewhyeung/codingChallenge.git
 <br>
 2. npm start or node server.js
