@@ -41,6 +41,7 @@ myApp.controller('mainController', function($scope, mainFactory){
 	mainFactory.get(function(response){
 		$scope.header = response;
 		$scope.products = response.products;
+		
 	})
 
 })
